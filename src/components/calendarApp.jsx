@@ -35,7 +35,7 @@ const calendarApp = () => {
           <span>12</span>
           <span>13</span>
           <span>14</span>
-          <span>15</span>
+          <span className="current-day">15</span>
           <span>16</span>
           <span>17</span>
           <span>18</span>
@@ -53,26 +53,41 @@ const calendarApp = () => {
           <span>30</span>
           <span>31</span>
         </div>
-        <div className="events">
-          <div className="events-popup">
-            <div className="time-input">
-              <div className="event-popup-time">Time</div>
-              <input
-                type="number"
-                name="hours"
-                min={0}
-                max={24}
-                className="hours"
-              />
-              <input
-                type="number"
-                name="minutes"
-                min={0}
-                max={60}
-                className="minutes"
-              />
-              <textarea placeholder="Enter Event Text (Maximum 0 Characters)"></textarea>
-            </div>
+      </div>
+      <div className="events">
+        <div className="event-popup">
+          <div className="time-input">
+            <div className="event-popup-time">Time</div>
+            <input
+              type="number"
+              name="hours"
+              min={0}
+              max={24}
+              className="hours"
+            />
+            <input
+              type="number"
+              name="minutes"
+              min={0}
+              max={60}
+              className="minutes"
+            />
+          </div>
+          <textarea placeholder="Enter Event Text (Maximum 0 Characters)"></textarea>
+          <button className="event-popup-btn">Add Event</button>
+          <button className="close-event-popup">
+            <i className="bx bx-x"></i>
+          </button>
+        </div>
+        <div className="event">
+          <div className="event-date-wrapper">
+            <div className="event-date">May 15, 2025</div>
+            <div className="event-time">10:00</div>
+          </div>
+          <div className="event-text">Meeting with John</div>
+          <div className="event-buttons">
+            <i className="bx bxs-edit-alt"></i>
+            <i className="bx bxs-message-alt-x"></i>
           </div>
         </div>
       </div>
