@@ -1,4 +1,25 @@
-const calendarApp = () => {
+import { useState } from "react";
+
+const CalendarApp = () => {
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const monthsOfYear = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const currentDate = new Date();
+
+  const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
+  const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
   return (
     <div className="calendar-app">
       <div className="calendar">
@@ -95,4 +116,4 @@ const calendarApp = () => {
   );
 };
 
-export default calendarApp;
+export default CalendarApp;
